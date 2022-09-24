@@ -1,0 +1,223 @@
+/* mobile  */
+@media (max-width:1023px) {
+    :root {
+        --header-height: 120px;
+        --nav-height: 0;
+        --header-with-search-height: calc(var(--header-height) - var(--nav-height));
+    }
+
+    .header {
+        height: 65px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    }
+    .cart__list {
+        position: fixed;
+        top: 105px;
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) /2);
+    }
+    .info__header-name{
+       overflow: inherit;
+    }
+    .cart__list::before{
+        display: none;
+    }
+    .container {
+        margin-top: 88px;
+    }
+    .home-filter{
+        padding: 0;
+        position: fixed;
+        top:65px;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .home__btn{
+        flex: 1;
+        margin-right: 0;
+       position: relative;
+    }
+    .home__btn::before{
+        position: absolute;
+        content: "";
+        display: block;
+        height: 60%;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-right: 2px solid #e5e5e5;
+    }
+    .header-with__search{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__search-mobile{
+        flex: 1;
+    }
+    .header__search-mobile--icon{
+        color: #fff;
+        font-size: 2.5rem;
+        padding: 12px;
+        cursor: pointer;
+    }
+    .header__cart {
+        width: unset;
+        flex: 1;
+        text-align: right;
+    }
+    .header__logo{
+        width: unset;
+        flex: 1;
+        text-align: center; 
+        line-height: 0;
+    }
+    .header__logo-img{
+        width: 110px;
+    }
+    .header__search{
+        position:fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 10px rgba(0 , 0 , 0 ,0.3);
+        padding: 0 24px;
+        animation:searchCheckbox linear 0.3s ;
+        display: none;
+    }
+    
+    @keyframes searchCheckbox {
+        from{
+            opacity: 0;
+            top: 30px;
+        }
+        to{
+            opacity: 1;
+            top: 68px;
+        }
+    }
+    .header__search__mobile:checked~ .header__search{
+        display: flex;
+    }
+
+
+    .header__menu__mobile{
+        font-size: 2.5rem;
+        padding: 12px;
+        cursor: pointer;
+    }
+    
+    .category{
+        position: fixed;
+        top: 65px;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        box-shadow: 0 0 8px rgba(0 , 0 , 0 , 0.3);
+        animation: aniCategory linear 0.3s;
+        display: none;
+    }
+   
+
+    @keyframes aniCategory {
+        from{
+            opacity: 0;
+            left: 100%;
+        }
+        to{
+            opacity: 1;
+            left: 0;
+        }
+    }
+    .category-list{
+        margin-top:48px ;
+    }
+    .category-item{
+        padding: 12px 8px;
+        font-size: 2rem;
+        border-bottom: 1px solid #999;
+        margin-right: 8px;
+    }
+    .category__close{
+     position: absolute;
+     right: 0;
+    }
+    .category__close-icon{
+        color:#000;
+        font-size: 3rem;
+        text-align: right;
+        padding: 16px;
+        opacity: 0.6;
+    }
+    .header__user-icon{
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+    .LogIn-list {
+        background-color: #fff;
+        list-style: none;
+        position: fixed;
+        top: 65px;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 0 8px rgba(0 , 0 , 0 , 0.3);
+        animation: aniLogIn linear 0.4s;
+        display: none;
+    }
+    @keyframes aniLogIn {
+        from{
+            opacity: 0;
+            right: 100%;
+        }
+        to{
+            opacity: 1;
+            right: 0;
+        }
+    }
+    .LogIn-list{
+        background-color: #fff;
+        list-style: none;
+    }
+    .LogIn-item{
+        font-size: 2rem;
+        color: #000;
+        padding: 12px;
+        margin: 16px;
+    }
+    .LogIn-item:hover{
+        color:#fe6433 ;
+    }
+    .logIn__close{
+        display: block;
+        text-align: left;
+      font-size: 3rem;
+    }
+    .logIn__close-icon{
+        color:#000;
+        font-size: 3rem;
+        text-align: right;
+        padding: 16px;
+        opacity: 0.6;
+    }
+}
+
+/* tablet  */
+@media (min-width:740px) and (max-width:1023px) {}
+
+/* mobile  */
+@media (max-width:739px) {
+        .footer{
+            padding:0 16px;
+        }
+        .row{
+            padding: 0 8px;
+        }
+        
+    }
